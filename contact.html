@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      main {
+        background-image: linear-gradient(
+          to right,
+          rgb(234, 240, 242),
+          rgb(49, 186, 240)
+        );
+        margin: 0px 20px;
+        padding: 20px 0px;
+        position: relative;
+      }
+
+      .navbar {
+        overflow: auto;
+        padding-left: 40px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        position: sticky;
+        top: 10px;
+      }
+      .navbar a {
+        float: left;
+        text-align: center;
+        padding: 12px;
+        color: rgb(8, 115, 168);
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .navbar a:hover {
+        background-color: #033752;
+        border-radius: 30px;
+      }
+      .active {
+        background-color: rgb(59, 192, 245);
+        border-radius: 30px;
+      }
+      /* for contact form  */
+      form{
+        font-size: 20px;
+        color: #033752;
+      }
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: #15a2cd;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #2e94d0;
+      }
+
+      .container {
+        border-radius: 5px;
+        background-color:transparent;
+        padding: 20px;
+      }
+      /* for meeting table  */
+      section {
+        width: 100%;
+        text-align: center;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+      }
+      th {
+        font-size: 30px;
+      }
+      td {
+        font-size: 20px;
+      }
+      th,
+      td {
+        text-align: center;
+        padding: 16px;
+        color: #033752;
+      }
+
+      th:first-child,
+      td:first-child {
+        text-align: left;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #f2f2f2;
+      }
+
+      .fa-check {
+        color: green;
+      }
+
+      .fa-remove {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="navbar">
+          <a href="index.html"><i class="fa fa-fw fa-home"></i> Profile</a>
+          <a href="#project"><i class="fa fa-fw fa-search"></i> Project</a>
+          <a href="#"><i class="fa fa-fw fa-envelope"></i> Experience</a>
+          <a class="active" href="#"
+            ><i class="fa fa-fw fa-user"></i> Contact</a
+          >
+        </div>
+      </nav>
+      <!-- contact form  -->
+        <h3
+          style="
+            font-size: 35px;
+            text-align: center;
+            color: rgb(178, 187, 187);
+            text-shadow: 1px 1px 2px rgb(46, 126, 128),
+              0 0 1em rgb(129, 129, 231), 0 0 0.2em blue;
+          "
+        >
+          Contact Form
+        </h3>
+
+        <div class="container">
+          <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+            <label for="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your email address.."
+            />
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="yg">Yangon</option>
+              <option value="mdl">Mandalay</option>
+              <option value="npt">NayPyiTaw</option>
+              <option value="others">Others</option>
+            </select>
+
+            <label for="address">Address & phone number</label>
+            <textarea
+              id="address"
+              name="address"
+              placeholder="Write something.."
+              style="height: 200px"
+            ></textarea>
+
+            <input type="submit" value="Send me" />
+          </form>
+        </div>
+     
+        <hr>
+      <!-- meeting table  -->
+      <section>
+        <h2
+          style="
+            font-size: 35px;
+            padding-top: 10px;
+            color: rgb(178, 187, 187);
+            text-shadow: 1px 1px 2px rgb(46, 126, 128),
+              0 0 1em rgb(129, 129, 231), 0 0 0.2em blue;
+          "
+        >
+          Meeting Time Table
+        </h2>
+
+        <table>
+          <tr>
+            <th style="width: 50%">Days</th>
+            <th>9 AM To 3 PM</th>
+            <th>5 PM To 11 PM</th>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td><i class="fa fa-remove"></i></td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td><i class="fa fa-remove"></i></td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+          </tr>
+        </table>
+      </section>
+
+      <footer style="text-align: center; padding: 20px 0px">
+        <small style="color: #033752">
+          Copyright © 2023 Amayar Pyo. All Rights Reserved.
+        </small>
+        <p style="font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: rgb(109, 119, 123);">
+          <a href="mailto:Amayarpyo200089@gmail.com">To Amayar Pyo's Mail</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
